@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  min-height: 100vh;
+  overflow: auto;
+}
+:root {
+  font-size: 18px;
+}
+
+@layer components {
+  //App styles
+  .App {
+    @apply min-h-screen relative bg-Cream;
+    overflow: auto;
+  }
+  // Container
+  .Container {
+    @apply w-[90%] space-y-6  mt-10 mb-20 max-w-lg  m-auto;
+  }
+
+  //Header
+  .Header {
+    @apply w-full h-28 bg-SoftRed flex justify-between items-center rounded-lg shadow-md text-white px-4;
+    &_info {
+      h5 {
+        @apply text-base tracking-wide text-white/80;
+      }
+      h1 {
+        @apply text-2xl font-bold tracking-wide;
+      }
+    }
+  }
+  //Chart Container styles
+  .Charts_Container {
+    @apply bg-VeryPaleOrange shadow-xl rounded-lg px-4 py-8 min-h-fit;
+    &_line {
+      @apply border rounded-lg border-t-MediumBrown/30 my-6;
+    }
+    &-footer {
+      @apply flex justify-between;
+      &-total {
+        h5 {
+          @apply text-MediumBrown text-sm;
+        }
+        h1 {
+          @apply text-DarkBrown text-3xl font-bold;
+        }
+      }
+      &-diff {
+        @apply flex flex-col items-end justify-end;
+        h5 {
+          @apply text-MediumBrown text-[3vw] md:text-sm;
+        }
+        h1 {
+          @apply text-DarkBrown text-lg font-bold;
+        }
+      }
+    }
+  }
+  // Charts
+  .Charts {
+    @apply h-56 mb-11;
+    &_title {
+      @apply text-2xl text-DarkBrown font-bold;
+    }
+  }
+}
