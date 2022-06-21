@@ -24,7 +24,7 @@ body {
   }
   // Container
   .Container {
-    @apply w-[90%] space-y-6  mt-10 mb-20 max-w-lg  m-auto;
+    @apply w-[90%] space-y-6  mt-10 md:mt-32 mb-20 max-w-lg  m-auto;
   }
 
   //Header
